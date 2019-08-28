@@ -7,16 +7,16 @@ Checklist of the most important security countermeasures when designing, testing
 ---
 
 ## Authentication
-- [ ] Don't use `Basic Auth`. Use standard authentication (e.g. [JWT](https://jwt.io/), [OAuth](https://oauth.net/)).
-- [ ] Don't reinvent the wheel in `Authentication`, `token generation`, `password storage`. Use the standards.
-- [ ] Use `Max Retry` and jail features in Login.
-- [ ] Use encryption on all sensitive data.
+- [x] Don't use `Basic Auth`. Use standard authentication (e.g. [JWT](https://jwt.io/), [OAuth](https://oauth.net/)).
+- [x] Don't reinvent the wheel in `Authentication`, `token generation`, `password storage`. Use the standards.
+- [x] Use `Max Retry` and jail features in Login.
+- [x] Use encryption on all sensitive data.
 
 ### JWT (JSON Web Token)
-- [ ] Use a random complicated key (`JWT Secret`) to make brute forcing the token very hard.
-- [ ] Don't extract the algorithm from the header. Force the algorithm in the backend (`HS256` or `RS256`).
-- [ ] Make token expiration (`TTL`, `RTTL`) as short as possible.
-- [ ] Don't store sensitive data in the JWT payload, it can be decoded [easily](https://jwt.io/#debugger-io).
+- [x] Use a random complicated key (`JWT Secret`) to make brute forcing the token very hard.
+- [x] Don't extract the algorithm from the header. Force the algorithm in the backend (`HS256` or `RS256`).
+- [x] Make token expiration (`TTL`, `RTTL`) as short as possible.
+- [x] Don't store sensitive data in the JWT payload, it can be decoded [easily](https://jwt.io/#debugger-io).
 
 ### OAuth
 - [ ] Always validate `redirect_uri` server-side to allow only whitelisted URLs.
